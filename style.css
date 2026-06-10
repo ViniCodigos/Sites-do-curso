@@ -1,0 +1,177 @@
+*{
+
+    padding: 0;
+    margin: 0;
+
+}
+
+:root{
+
+    --grid-column: 1fr 3fr 1fr;
+    --grid-row: 5vh 1fr auto;
+
+    --background-color-header: #D97706;
+    --background-color-navanuncio: #355E3B;
+    --background-color-conteudo: #FFF8E7;
+    --background-color-footer: #2C3E50;
+    
+}
+
+body{
+
+    display: grid;
+    min-height: 100vh;
+
+    grid-template-areas:
+    
+    "header header header"
+    "nav conteudo anuncio"
+    "footer footer footer"
+    
+    ;
+
+    grid-template-columns: var(--grid-column);
+    grid-template-rows: var(--grid-row);
+
+}
+
+header{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    grid-area: header;
+    background-color: var(--background-color-header);
+
+}
+
+nav{
+
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    
+    padding-top: 1rem;
+
+    grid-area: nav;
+    background-color: var(--background-color-navanuncio);
+
+}
+
+nav a{
+
+    text-decoration: none;
+    color: black;
+
+}
+
+nav li{
+
+    margin: 1rem;
+    padding: 0.3rem;
+    text-align: center;
+    
+    list-style: none;
+    background-color: var(--background-color-header);
+    border-radius: 5px;
+    border: 1px solid var(--background-color-footer);
+
+    transition: 0.3s;
+
+}
+
+nav li:hover{
+
+    transform: scale(1.2);
+    
+}
+
+.content{
+
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+
+    gap: 1rem;
+    
+    grid-area: conteudo;
+    background-color: var(--background-color-conteudo);
+
+}
+
+.anuncio{
+
+    grid-area: anuncio;
+    background-color: var(--background-color-navanuncio);
+
+}
+
+footer{
+
+    grid-area: footer;
+    background-color: var(--background-color-footer);
+}
+
+/*Conteudo*/
+
+#animais{
+
+display: flex;
+flex-direction: row;
+
+gap: 1rem;
+
+}
+
+.info{
+
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    gap: 1rem;
+
+    padding: 1rem;
+
+}
+
+.info p{
+
+    padding: 0.5rem;
+
+}
+
+.info img{
+
+    width: 500px;
+    border-radius: 5px;
+
+}
+
+/*Formulario*/
+
+#formulario{
+
+    display: flex;
+    justify-content: center;
+
+    padding: 1rem;
+
+}
+
+#formulario laber{
+
+    font-size: 1.2rem;
+    font-weight: bold;
+
+}
+
+#formulario form{
+
+    background-color: var(--background-color-header);
+    width: 500px;
+    margin: 20px auto;
+    border-radius: 10px;
+    padding: 10px;
+
+}
